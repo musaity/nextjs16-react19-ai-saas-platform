@@ -1,1008 +1,1126 @@
-# AI Creative Studio
+<p align="center">
+  <img src="docs/images/logo-banner.png" alt="AI Creative Studio" width="800" />
+</p>
 
-**Enterprise-Grade AI SaaS Platform | No-Code Admin Management | Multi-Provider AI Integration**
+<h1 align="center">AI Creative Studio</h1>
 
-A production-ready, white-label AI creative platform built with Next.js 16, React 19, and TypeScript. This platform enables businesses to deploy a complete AI-powered creative studio without writing a single line of code. Every aspect of the application—from landing page content to AI model configurations—is fully manageable through an intuitive admin dashboard.
+<p align="center">
+  <strong>Enterprise-Grade SaaS Platform for AI Image, Video & Chat Generation</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/version-2.0.0-6C47FF?style=for-the-badge" alt="Version" />
+  <img src="https://img.shields.io/badge/Next.js-16.1-000000?style=for-the-badge&logo=next.js" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-5.8-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/License-Commercial-FF4154?style=for-the-badge" alt="License" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Prisma-5.22-2D3748?style=flat-square&logo=prisma" alt="Prisma" />
+  <img src="https://img.shields.io/badge/PostgreSQL-16-4169E1?style=flat-square&logo=postgresql" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/Stripe-Payments-635BFF?style=flat-square&logo=stripe" alt="Stripe" />
+  <img src="https://img.shields.io/badge/Clerk-Auth-6C47FF?style=flat-square&logo=clerk" alt="Clerk" />
+  <img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker" alt="Docker" />
+  <img src="https://img.shields.io/badge/Vercel-Deploy-000000?style=flat-square&logo=vercel" alt="Vercel" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?style=flat-square&logo=tailwindcss" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Node.js-20+-339933?style=flat-square&logo=node.js" alt="Node.js" />
+</p>
+
+<br/>
+
+<p align="center">
+  <img src="docs/images/hero-preview.png" alt="AI Creative Studio - Dashboard Preview" width="900" />
+</p>
 
 ---
+
+<br/>
 
 ## Table of Contents
 
+<table>
+<tr>
+<td width="50%" valign="top">
+
 - [Overview](#overview)
-- [Key Differentiators](#key-differentiators)
+- [Live Demo](#live-demo)
+- [Key Features](#key-features)
+- [AI Models & Providers](#ai-models--providers)
+- [Platform Integrations](#platform-integrations)
+- [Tech Stack](#tech-stack)
 - [Architecture](#architecture)
-- [Admin Panel Capabilities](#admin-panel-capabilities)
-- [Platform Features](#platform-features)
-- [AI Providers and Models](#ai-providers-and-models)
-- [External Integrations](#external-integrations)
-- [Technology Stack](#technology-stack)
+
+</td>
+<td width="50%" valign="top">
+
 - [Getting Started](#getting-started)
-- [Deployment Options](#deployment-options)
-- [Environment Configuration](#environment-configuration)
-- [Database Schema](#database-schema)
+- [Environment Variables](#environment-variables)
+- [Deployment](#deployment)
+- [Admin Panel](#admin-panel)
 - [API Reference](#api-reference)
-- [Security](#security)
+- [Screenshots](#screenshots)
 - [License](#license)
 
+</td>
+</tr>
+</table>
+
+<br/>
+
 ---
+
+<br/>
 
 ## Overview
 
-AI Creative Studio is a comprehensive SaaS solution designed for entrepreneurs, agencies, and enterprises who want to launch their own AI-powered creative platform. The system provides three core AI capabilities:
+**AI Creative Studio** is a production-ready, full-stack SaaS platform that unifies AI-powered image generation, video creation, intelligent chat, and voice processing into a single, beautifully crafted application. Built with **Next.js 16**, **React 19**, and **TypeScript**, it provides everything you need to launch your own AI-powered creative platform -- from a CMS-driven landing page to a complete admin dashboard.
 
-1. **Image Generation** — DALL-E 3, Gemini Imagen, Stability AI, and custom model support
-2. **Video Generation** — Kling AI integration for text-to-video and image-to-video
-3. **Intelligent Chat** — GPT-4, Gemini Pro, Claude, and multi-model conversation support
+Whether you are building a startup, scaling an enterprise tool, or launching on marketplaces like CodeCanyon, this platform delivers a polished, extensible foundation with **30+ admin panel modules**, **multi-provider AI support**, and **real-time billing integration**.
 
-What sets this platform apart is its **complete no-code administration**. Business owners can customize every element of their platform through the admin dashboard, eliminating the need for developer intervention after initial deployment.
+<br/>
+
+### Why AI Creative Studio?
+
+| Capability | Description |
+|:---|:---|
+| **Production-Ready** | Battle-tested architecture with health monitoring, error handling, and graceful degradation |
+| **Multi-Provider AI** | OpenAI, Google Gemini, Kling AI, Anthropic Claude, Stable Diffusion, and more |
+| **Full CMS** | Every section of the landing page, legal pages, blog, and help center is admin-manageable |
+| **Enterprise Auth** | Clerk-powered authentication with role-based admin access (Super Admin, Admin, Support, Read-Only) |
+| **Monetization-Ready** | Stripe integration with credit system, pricing plans, and detailed billing logs |
+| **Omnichannel AI** | Extend AI to WhatsApp, Telegram, Discord, and Slack via built-in integrations |
+| **SEO-Optimized** | Dynamic metadata, Open Graph, JSON-LD structured data, sitemaps, and robots.txt |
+| **PWA Support** | Installable as a Progressive Web App on any device |
+
+<br/>
+
+---
+
+<br/>
+
+## Live Demo
+
+<table>
+<tr>
+<td align="center" width="33%">
+  <img src="docs/images/demo-landing.png" alt="Landing Page" width="280" />
+  <br/><br/>
+  <strong>Landing Page</strong>
+  <br/>
+  <sub>CMS-driven, fully customizable</sub>
+</td>
+<td align="center" width="33%">
+  <img src="docs/images/demo-studio.png" alt="AI Studio" width="280" />
+  <br/><br/>
+  <strong>AI Studio</strong>
+  <br/>
+  <sub>Image, Video & Chat generation</sub>
+</td>
+<td align="center" width="33%">
+  <img src="docs/images/demo-admin.png" alt="Admin Panel" width="280" />
+  <br/><br/>
+  <strong>Admin Panel</strong>
+  <br/>
+  <sub>30+ management modules</sub>
+</td>
+</tr>
+</table>
+
+<br/>
 
 ---
 
-## Key Differentiators
+<br/>
 
-### Complete No-Code Administration
+## Key Features
 
-Unlike traditional SaaS templates that require code modifications for customization, this platform provides:
+### AI Generation Engine
 
-| Feature | Traditional Approach | AI Creative Studio |
-|---------|---------------------|-------------------|
-| Landing Page Content | Edit `.tsx` files | Admin Dashboard |
-| AI Model Management | Environment variables | Visual Model Manager |
-| Pricing Plans | Database migrations | Drag-and-drop Editor |
-| Legal Documents | Static files | Rich Text Editor |
-| Branding and Logos | Replace image files | Upload Interface |
-| Feature Toggles | Code deployment | One-click Toggle |
-| User Management | Raw database queries | Full Admin Panel |
+<table>
+<tr>
+<td width="50%">
 
-### Enterprise-Ready Features
+**Image Generation**
+- Multi-model support (DALL-E 2, DALL-E 3, Gemini, Stable Diffusion)
+- Configurable aspect ratios (1:1, 16:9, 9:16, 4:3)
+- Quality presets (Standard, HD, Ultra)
+- Magic Prompt enhancement for optimized results
+- Drag-and-drop image upload for vision models
+- Gallery management with prompt reuse
 
-- **Multi-tenant Architecture** — Single codebase, infinite customization
-- **Role-Based Access Control** — Super Admin, Admin, Support, Read-Only roles
-- **Comprehensive Audit Logging** — Track every administrative action
-- **Rate Limiting and Abuse Prevention** — Built-in moderation system
-- **Credit-Based Billing** — Flexible monetization with Stripe integration
-- **External Platform Integration** — WhatsApp, Telegram, Discord, Slack bots
+</td>
+<td width="50%">
+
+**Video Generation**
+- Kling AI video generation (image-to-video)
+- Configurable duration, mode, and CFG scale
+- Negative prompt support
+- Mask-based generation controls
+- Real-time generation status tracking
+- Direct download with CORS proxy
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+**AI Chat & LLM**
+- GPT-4o, Claude 3.5, Gemini 2.0 support
+- Multi-turn conversation history
+- Vision support (image analysis)
+- Streaming responses
+- Configurable system prompt, temperature, max tokens
+- Preset prompt suggestions by category
+
+</td>
+<td width="50%">
+
+**Voice Processing**
+- Text-to-Speech via OpenAI TTS
+- Speech-to-Text via Whisper
+- Multiple voice options (Alloy, Echo, Fable, Onyx, Nova, Shimmer)
+- Adjustable speed settings
+- Admin-configurable voice parameters
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+### Platform & User Features
+
+<table>
+<tr>
+<td width="50%">
+
+- Unified AI Studio workspace
+- Personal image gallery with download
+- Conversation history and management
+- Credit-based usage system
+- Stripe-powered billing and subscriptions
+- User profile and settings management
+- API key management per user
+
+</td>
+<td width="50%">
+
+- Guest browsing mode (no auth required)
+- Dark / Light theme toggle
+- PWA installation support
+- Responsive design (mobile-first)
+- Real-time toast notifications
+- Help center and FAQ
+- Contact form with file upload
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+### CMS-Driven Landing Page
+
+Every element of the landing page is managed through the admin panel:
+
+<table>
+<tr>
+<td width="33%">
+
+**Hero Section**
+- Custom title, subtitle, badge
+- CTA buttons with URLs
+- Stats counters
+- Trusted-by company logos
+- Demo media (video/image)
+- Custom fonts and sizes
+
+</td>
+<td width="33%">
+
+**Content Sections**
+- AI Models Showcase
+- Feature cards with icons/gradients
+- Integrations display
+- Testimonials carousel
+- Gallery showcase
+- CTA section with benefits
+
+</td>
+<td width="33%">
+
+**Navigation & Footer**
+- Dynamic navbar with nested items
+- Footer link categories
+- Social media links
+- Contact information
+- Blog integration
+- Legal page links
+
+</td>
+</tr>
+</table>
+
+<br/>
 
 ---
+
+<br/>
+
+## AI Models & Providers
+
+<table>
+<tr>
+<th align="left">Provider</th>
+<th align="left">Models</th>
+<th align="left">Capabilities</th>
+<th align="center">Status</th>
+</tr>
+<tr>
+<td><strong>OpenAI</strong></td>
+<td>DALL-E 2, DALL-E 3, GPT-4o</td>
+<td>Image Generation, Chat, Vision, TTS, STT</td>
+<td align="center"><img src="https://img.shields.io/badge/-Active-34D058?style=flat-square" /></td>
+</tr>
+<tr>
+<td><strong>Google</strong></td>
+<td>Gemini 2.0, Gemini 3 Pro Image Preview</td>
+<td>Chat, Multimodal, Image Generation</td>
+<td align="center"><img src="https://img.shields.io/badge/-Active-34D058?style=flat-square" /></td>
+</tr>
+<tr>
+<td><strong>Kuaishou</strong></td>
+<td>Kling AI v1</td>
+<td>Video Generation (Image-to-Video)</td>
+<td align="center"><img src="https://img.shields.io/badge/-Active-34D058?style=flat-square" /></td>
+</tr>
+<tr>
+<td><strong>Anthropic</strong></td>
+<td>Claude 3.5 Sonnet</td>
+<td>Chat, Analysis, Code Generation</td>
+<td align="center"><img src="https://img.shields.io/badge/-Active-34D058?style=flat-square" /></td>
+</tr>
+<tr>
+<td><strong>Stability AI</strong></td>
+<td>Stable Diffusion</td>
+<td>Image Generation</td>
+<td align="center"><img src="https://img.shields.io/badge/-Active-34D058?style=flat-square" /></td>
+</tr>
+<tr>
+<td><strong>Replicate</strong></td>
+<td>Custom Models</td>
+<td>Multi-purpose</td>
+<td align="center"><img src="https://img.shields.io/badge/-Supported-0366D6?style=flat-square" /></td>
+</tr>
+<tr>
+<td><strong>Mistral</strong></td>
+<td>Mistral Large, Mixtral</td>
+<td>Chat, Code</td>
+<td align="center"><img src="https://img.shields.io/badge/-Supported-0366D6?style=flat-square" /></td>
+</tr>
+<tr>
+<td><strong>Cohere</strong></td>
+<td>Command R+</td>
+<td>Chat, RAG</td>
+<td align="center"><img src="https://img.shields.io/badge/-Supported-0366D6?style=flat-square" /></td>
+</tr>
+<tr>
+<td><strong>HuggingFace</strong></td>
+<td>Inference API</td>
+<td>Multi-purpose</td>
+<td align="center"><img src="https://img.shields.io/badge/-Supported-0366D6?style=flat-square" /></td>
+</tr>
+</table>
+
+> **API Key Resolution Priority:** Model-specific key --> Default key from Admin Settings --> Environment variable fallback. This three-tier system ensures maximum flexibility for multi-tenant deployments.
+
+<br/>
+
+---
+
+<br/>
+
+## Platform Integrations
+
+Extend your AI capabilities to popular messaging platforms with built-in bot integrations:
+
+<table>
+<tr>
+<td align="center" width="20%">
+  <img src="docs/images/integration-whatsapp.png" alt="WhatsApp" width="64" height="64" />
+  <br/><br/>
+  <strong>WhatsApp</strong>
+  <br/>
+  <sub>Business Cloud API</sub>
+</td>
+<td align="center" width="20%">
+  <img src="docs/images/integration-telegram.png" alt="Telegram" width="64" height="64" />
+  <br/><br/>
+  <strong>Telegram</strong>
+  <br/>
+  <sub>Bot API</sub>
+</td>
+<td align="center" width="20%">
+  <img src="docs/images/integration-discord.png" alt="Discord" width="64" height="64" />
+  <br/><br/>
+  <strong>Discord</strong>
+  <br/>
+  <sub>API v10</sub>
+</td>
+<td align="center" width="20%">
+  <img src="docs/images/integration-slack.png" alt="Slack" width="64" height="64" />
+  <br/><br/>
+  <strong>Slack</strong>
+  <br/>
+  <sub>Bot API</sub>
+</td>
+<td align="center" width="20%">
+  <img src="docs/images/integration-webhook.png" alt="Webhooks" width="64" height="64" />
+  <br/><br/>
+  <strong>Webhooks</strong>
+  <br/>
+  <sub>Custom REST</sub>
+</td>
+</tr>
+</table>
+
+Each integration includes:
+- Bi-directional message support (send and receive)
+- Automatic user mapping and conversation management
+- Credit-based usage tracking per external user
+- Admin panel configuration (API keys, webhook URLs, channel IDs)
+- Test functionality for verifying connections
+
+<br/>
+
+---
+
+<br/>
+
+## Tech Stack
+
+<table>
+<tr>
+<td width="50%">
+
+### Frontend
+| Technology | Version | Purpose |
+|:---|:---|:---|
+| Next.js | 16.1 | React Framework (App Router) |
+| React | 19.2 | UI Library |
+| TypeScript | 5.8 | Type Safety |
+| Tailwind CSS | 3.4 | Utility-First Styling |
+| shadcn/ui | Latest | Component Library |
+| Framer Motion | 12.31 | Animations |
+| Recharts | 3.7 | Data Visualization |
+| Lucide React | 0.562 | Icon Library |
+
+</td>
+<td width="50%">
+
+### Backend & Infrastructure
+| Technology | Version | Purpose |
+|:---|:---|:---|
+| PostgreSQL | 16 | Primary Database |
+| Prisma | 5.22 | ORM & Migrations |
+| Clerk | 6.36 | Authentication |
+| Stripe | 20.3 | Payments & Billing |
+| Docker | Latest | Containerization |
+| Vercel | Latest | Edge Deployment |
+| Node.js | 20+ | Runtime |
+| Sonner | 2.0 | Toast Notifications |
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+---
+
+<br/>
 
 ## Architecture
 
 ```
-+-----------------------------------------------------------------------------+
-|                              CLIENT LAYER                                    |
-+-----------------+-----------------+-----------------+----------------------+
-|   Landing Page  |  User Platform  |  Admin Panel    |  External Platforms  |
-|   (Marketing)   |  (Generation)   |  (Management)   |  (WhatsApp/Telegram) |
-+--------+--------+--------+--------+--------+--------+----------+-----------+
-         |                 |                 |                   |
-         +-----------------+-----------------+-------------------+
-                                    |
-+-----------------------------------+-----------------------------------+
-|                           NEXT.JS 16 APP ROUTER                        |
-+---------------------------------------------------------------------------+
-|  Server Components  |  Server Actions  |  API Routes  |  Middleware        |
-+---------------------------------------------------------------------------+
-                                    |
-+-----------------------------------+-----------------------------------+
-|                            SERVICE LAYER                               |
-+-----------------+-----------------+-----------------+------------------+
-|   AI Service    |  Auth Service   |  Payment Service|  Integration Svc |
-|   (Multi-Model) |  (Clerk)        |  (Stripe)       |  (Webhooks)      |
-+--------+--------+--------+--------+--------+--------+----------+-------+
-         |                 |                 |                   |
-+--------+-----------------+-----------------+-------------------+-------+
-|                            DATA LAYER                                  |
-+------------------------------------------------------------------------+
-|                     PostgreSQL + Prisma ORM                            |
-|   Users | Generations | Transactions | Settings | CMS Content | Logs   |
-+------------------------------------------------------------------------+
+ai-creative-studio/
+|
+|-- app/                          # Next.js App Router
+|   |-- page.tsx                  # CMS-driven landing page
+|   |-- layout.tsx                # Root layout (SEO, fonts, theme)
+|   |
+|   |-- platform/                 # User-facing platform
+|   |   |-- studio/               # AI Studio (image, video, chat)
+|   |   |-- gallery/              # Personal image gallery
+|   |   |-- chat/                 # AI Chat interface
+|   |   |-- billing/              # Credit purchase & billing
+|   |   |-- settings/             # User settings
+|   |   |-- history/              # Generation history
+|   |   +-- help/                 # Help center
+|   |
+|   |-- admin/                    # Admin dashboard (30+ modules)
+|   |   |-- settings/             # Global site settings
+|   |   |-- models/               # AI model management
+|   |   |-- users/                # User management
+|   |   |-- analytics/            # Revenue & usage analytics
+|   |   |-- blog/                 # Blog CMS
+|   |   |-- gallery/              # Gallery CMS
+|   |   |-- chat-integrations/    # Bot integrations config
+|   |   |-- moderation/           # Content moderation
+|   |   |-- feature-flags/        # Feature flag management
+|   |   +-- ...                   # 20+ more modules
+|   |
+|   |-- api/                      # API Routes
+|   |   |-- generate/             # Image generation API
+|   |   |-- chat/                 # Chat completion API
+|   |   |-- voice/                # TTS & STT APIs
+|   |   |-- checkout/             # Stripe checkout
+|   |   |-- webhooks/             # Stripe webhooks
+|   |   |-- integrations/         # Bot webhook receivers
+|   |   |-- kling/                # Video generation
+|   |   +-- admin/                # Admin CRUD APIs (22 routes)
+|   |
+|   |-- blog/                     # Public blog
+|   |-- docs/                     # Developer documentation
+|   |-- contact/                  # Contact form
+|   |-- legal/                    # Legal pages (dynamic)
+|   +-- about/                    # About page
+|
+|-- lib/                          # Core libraries
+|   |-- ai-service.ts             # Multi-provider AI service
+|   |-- db.ts                     # Prisma client singleton
+|   |-- stripe.ts                 # Stripe client
+|   |-- stripe-actions.ts         # Stripe server actions
+|   |-- seo.ts                    # SEO & JSON-LD utilities
+|   |-- config.ts                 # App configuration
+|   |-- crypto.ts                 # API key encryption
+|   |-- prompt-enhancer.ts        # Magic Prompt AI enhancer
+|   +-- integrations/             # Chat platform handlers
+|
+|-- prisma/
+|   |-- schema.prisma             # Database schema (30+ models)
+|   +-- seed.ts                   # Database seed script
+|
+|-- scripts/                      # Utility scripts
+|-- public/                       # Static assets
++-- docker-compose.yml            # Docker orchestration
 ```
 
----
-
-## Admin Panel Capabilities
-
-The admin dashboard provides complete control over every aspect of the platform:
-
-### 1. Global Settings (`/admin/settings`)
-
-**General Settings**
-- Site name, description, and URL
-- Support email configuration
-- SEO keywords and meta tags
-
-**Branding**
-- Logo upload (light and dark mode variants)
-- Favicon customization
-- Brand name configuration
-
-**Landing Page**
-- Hero section content (title, subtitle, badge)
-- Typography controls (font family, size for each element)
-- Demo media configuration (video/image popup on "Watch Demo" button)
-- Feature section customization
-- CTA section content
-
-**Payment Configuration**
-- Stripe API keys (publishable, secret, webhook)
-- Credit pricing settings
-- Welcome credits for new users
-- Daily free credit allocation
-
-**AI API Keys**
-- Default OpenAI API key
-- Default Gemini API key
-- Kling AI credentials
-- Per-model API key override
-
-**Theme Settings**
-- Default theme (dark/light)
-- User theme toggle permission
-
-### 2. AI Model Management (`/admin/models`)
-
-Complete visual control over AI models with extensive configuration options:
-
-**Basic Configuration**
-- Provider selection (OpenAI, Gemini, Kling, Anthropic, Mistral, Stability, Replicate, HuggingFace, Custom)
-- Model type (LLM, Image, Video, Audio, Embedding, Multimodal)
-- API identifier and custom endpoints
-- Model-specific API keys
-
-**Pricing Configuration**
-- Pricing model (Per Request, Per Token, Per Second, Per Image, Tiered)
-- Input/Output token costs for LLMs
-- Credit cost per generation
-- Plan tier requirements
-
-**Rate Limits and Quotas**
-- Requests per minute
-- Requests per day
-- Max tokens per request
-- Max images per request
-
-**Capabilities and Constraints**
-- Feature flags (vision, function_calling, streaming, json_mode)
-- Supported image sizes and formats
-- Context window size
-- Quality presets (standard, HD, ultra)
-
-**Access Control**
-- Public/Private visibility
-- Beta feature flag
-- Deprecation status
-- Required plan tier
-
-### 3. User Management (`/admin/users`)
-
-- Complete user listing with search and filters
-- Credit balance management (add/subtract with reason logging)
-- Account blocking/unblocking
-- Stripe customer ID linking
-- Generation history per user
-- Credit transaction audit trail
-
-### 4. Content Management System
-
-**Features Manager (`/admin/features`)**
-- Create/edit landing page feature cards
-- Icon selection from Lucide library
-- Gradient color configuration
-- Badge labels (New, Popular, etc.)
-- Media attachments (image/video with admin-configurable URLs)
-- Display order control
-- Active/inactive toggle
-
-**Gallery Manager (`/admin/gallery`)**
-- Showcase curated AI generations
-- Prompt attribution
-- Model labeling
-- Display ordering
-
-**Testimonials (`/admin/testimonials`)**
-- Customer review management
-- Author details and avatars
-- Star ratings (1-5)
-- Featured testimonials
-
-**Blog System (`/admin/blog`)**
-- Rich text editor with markdown support
-- Category management
-- Tag system
-- Featured posts
-- Publish scheduling
-- View analytics
-
-**Legal Documents (`/admin/legal`)**
-- Terms of Service
-- Privacy Policy
-- Refund Policy
-- Cookie Policy
-- Version history tracking
-
-**Help Center (`/admin/help-center`)**
-- FAQ management
-- Category organization
-- Publishable content
-
-### 5. Pricing Plans (`/admin/plans`)
-
-Visual pricing plan editor:
-- Plan name and description
-- Price configuration
-- Credit allocation
-- Feature list (bullet points)
-- Popular plan highlighting
-- Active/inactive toggle
-
-### 6. Chat Configuration
-
-**Chat Prompts (`/admin/chat-prompts`)**
-- Predefined conversation starters
-- Category organization
-- Icon assignment
-- Display ordering
-
-**Chat Integrations (`/admin/chat-integrations`)**
-- WhatsApp Business API configuration
-- Telegram Bot setup
-- Discord Bot integration
-- Slack App configuration
-- Custom Webhook endpoints
-- Connection testing
-
-**Voice Settings (`/admin/voice-settings`)**
-- TTS voice selection (alloy, echo, fable, onyx, nova, shimmer)
-- Speech speed control
-- Transcription model selection
-
-### 7. Footer Management (`/admin/footer`)
-
-- Link categories (Product, Company, Resources, Legal)
-- Individual link management with external link support
-- Social media links with platform icons
-- Contact information (email, phone, address)
-
-### 8. Navigation Management (`/admin/navigation`)
-
-- Header navigation items
-- Dropdown menu support
-- Icon assignment
-- Display ordering
-- Active/inactive toggle
-
-### 9. Cookie Consent (`/admin/cookies`)
-
-- Banner content customization
-- Category descriptions (Analytics, Marketing, Functional)
-- Position and theme settings
-- Consent expiration configuration
-
-### 10. Analytics and Monitoring (`/admin/analytics`)
-
-- Revenue tracking
-- Credit usage statistics
-- Generation counts by model
-- Active user metrics
-- Time-series data visualization
-
-### 11. System Health (`/admin/health`)
-
-- Component status monitoring
-- Latency metrics
-- Error count tracking
-- Database connection status
-- API endpoint health
-
-### 12. Audit Logs (`/admin/audit-logs`)
-
-Complete audit trail:
-- Every admin action logged
-- Resource identification
-- IP address tracking
-- Timestamp recording
-- Filterable by action type, admin, date range
-
-### 13. Role Management (`/admin/roles`)
-
-- Super Admin, Admin, Support, Read-Only roles
-- Permission-based access
-- Role assignment to admin users
-
-### 14. Feature Flags (`/admin/feature-flags`)
-
-- Toggle features without deployment
-- Percentage-based rollouts
-- A/B testing support
+<br/>
 
 ---
 
-## Platform Features
-
-### Image Generation Studio (`/platform/studio`)
-
-- Multi-model support with visual model selector
-- Aspect ratio presets (1:1, 16:9, 9:16, 4:3, 3:4)
-- Quality settings (Standard, HD, Ultra)
-- Style presets (Vivid, Natural, Cinematic, Anime, etc.)
-- Real-time generation with loading states
-- Personal gallery with history
-- Download in original format
-- Prompt history and favorites
-- Credit cost display per model
-
-### Video Generation (`/platform/studio`)
-
-- Text-to-video generation
-- Image-to-video animation
-- Duration controls (5s, 10s)
-- Resolution settings
-- Generation queue with status tracking
-- Video preview and download
-
-### AI Chat (`/platform/chat`)
-
-- Multi-model conversation support
-- Model switching mid-conversation
-- Conversation history with search
-- Voice input (speech-to-text)
-- Voice output (text-to-speech)
-- Code syntax highlighting
-- Markdown rendering
-- Conversation export
-- Predefined prompt suggestions
-
-### User Dashboard (`/platform`)
-
-- Credit balance display
-- Recent generations overview
-- Usage statistics
-- Quick action buttons
-
-### Gallery (`/platform/gallery`)
-
-- Personal generation gallery
-- Grid and list views
-- Download and share options
-- Prompt copying
-
-### History (`/platform/history`)
-
-- Complete generation history
-- Filter by type (image, video, chat)
-- Search functionality
-- Bulk actions
-
-### Billing (`/platform/billing`)
-
-- Current plan display
-- Credit purchase with Stripe
-- Transaction history
-- Stripe Customer Portal link
-
-### Settings (`/platform/settings`)
-
-- Profile management
-- API access toggle
-- Theme preferences
-- Notification settings
-
----
-
-## AI Providers and Models
-
-### Supported Providers
-
-| Provider | Image | Video | Chat | Voice |
-|----------|-------|-------|------|-------|
-| OpenAI | DALL-E 3, DALL-E 2 | — | GPT-4, GPT-4o, GPT-4o-mini | Whisper, TTS |
-| Google | Gemini Imagen 3 | — | Gemini 2.0 Flash, Gemini Pro | — |
-| Kling AI | — | Text-to-Video, Image-to-Video | — | — |
-| Anthropic | — | — | Claude 3, Claude 3.5 | — |
-| Stability AI | SDXL, SD 3 | — | — | — |
-| Mistral | — | — | Mistral Large, Mistral Medium | — |
-| Cohere | — | — | Command, Command R+ | — |
-| Replicate | Various | Various | Various | — |
-| HuggingFace | Various | Various | Various | — |
-| Custom | Configurable | Configurable | Configurable | Configurable |
-
-### API Key Resolution Priority
-
-The system resolves API keys in the following order:
-1. **Model-specific API key** — Stored in `AiModel.apiKey` for granular control
-2. **Default provider key** — Configured in `GlobalSettings` via Admin Panel
-3. **Environment variable** — Fallback from `.env` file
-
-This hierarchy allows maximum flexibility where specific models can use different API keys while maintaining sensible defaults.
-
-### Model Configuration Options
-
-Each model can be configured with:
-- Credit cost per generation
-- Rate limits (requests per minute/day)
-- Token limits (input/output)
-- Quality presets
-- Supported formats and sizes
-- Plan tier requirements
-- Beta/Deprecated flags
-- Custom API endpoints
-
----
-
-## External Integrations
-
-The platform supports AI chat through external messaging platforms. Users on these platforms automatically get accounts created and can interact with the AI using credits.
-
-### WhatsApp Business API
-
-- Automatic user provisioning based on phone number
-- Credit-based billing for external users
-- Conversation history synchronization
-- Media message support
-- Admin-configurable webhook endpoint
-
-### Telegram Bot
-
-- Bot token configuration via admin panel
-- Automatic user creation from Telegram ID
-- Command support
-- Group chat compatibility
-- Inline query responses
-
-### Discord Bot
-
-- Server and channel configuration
-- Role-based access control
-- Slash command support
-- Embed message formatting
-- Thread reply support
-
-### Slack App
-
-- Workspace integration setup
-- Channel-specific responses
-- Thread replies
-- Interactive components
-- Event subscriptions
-
-### Custom Webhooks
-
-For advanced integrations:
-- Configurable inbound/outbound endpoints
-- Authentication header support
-- Payload transformation
-- Response mapping
-- Error handling
-
-### Integration User Credits
-
-External platform users receive a configurable credit allocation (default: 100 credits) that can be adjusted in Global Settings.
-
----
-
-## Technology Stack
-
-### Core Framework
-- **Next.js 16.1.2** — App Router, React Server Components, Server Actions
-- **React 19.2.3** — Latest concurrent features and optimizations
-- **TypeScript** — Full type safety across the codebase
-
-### Styling and UI
-- **Tailwind CSS** — Utility-first CSS framework
-- **Radix UI** — Accessible component primitives
-- **Framer Motion 12** — Production-ready animations
-- **Lucide React** — Comprehensive icon library
-- **class-variance-authority** — Component variant management
-- **next-themes** — Dark/light mode support
-
-### Database and ORM
-- **PostgreSQL** — Primary database
-- **Prisma ORM 5.22** — Type-safe database access
-- **Supabase** — Recommended managed PostgreSQL provider
-
-### Authentication
-- **Clerk** — Complete authentication solution
-  - Email/password authentication
-  - Social logins (Google, GitHub, etc.)
-  - Multi-factor authentication
-  - Session management
-  - User metadata
-
-### Payments
-- **Stripe** — Payment processing
-  - Credit card payments
-  - Subscription management (optional)
-  - Customer portal
-  - Webhook handling
-  - Invoice generation
-
-### AI SDKs
-- **OpenAI SDK 6.x** — GPT and DALL-E integration
-- **Google GenAI** — Gemini integration
-- **Custom HTTP clients** — Kling AI, Stability, others
-
-### Utilities
-- **date-fns** — Date manipulation
-- **clsx** — Conditional class names
-- **react-markdown** — Markdown rendering
-- **jsonwebtoken** — JWT handling for integrations
-
-### Development
-- **ESLint** — Code linting
-- **cross-env** — Cross-platform environment variables
-
-### Deployment
-- **Vercel** — Recommended hosting platform
-- **Docker** — Containerization support
-- **Node.js 20+** — Runtime requirement
-
----
+<br/>
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 20.0.0 or higher
-- npm 10.0.0 or higher
-- PostgreSQL database (local, Supabase, or any provider)
-- Clerk account (free tier available)
-- Stripe account (for payments)
-- At least one AI provider API key
+| Requirement | Minimum Version |
+|:---|:---|
+| Node.js | 20.0.0 |
+| npm | 10.0.0 |
+| PostgreSQL | 16 (or Supabase/Neon) |
+| Clerk Account | [clerk.com](https://clerk.com) |
+| Stripe Account | [stripe.com](https://stripe.com) |
+| OpenAI API Key | [platform.openai.com](https://platform.openai.com) |
 
 ### Installation
 
-1. **Clone the Repository**
+**1. Clone the repository**
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/your-username/ai-creative-studio.git
 cd ai-creative-studio
 ```
 
-2. **Install Dependencies**
+**2. Install dependencies**
 
 ```bash
 npm install
 ```
 
-3. **Configure Environment**
+**3. Configure environment variables**
 
 ```bash
-cp .env.example .env
+cp .env.example .env.local
 ```
 
-4. **Edit Environment Variables**
+Edit `.env.local` with your credentials (see [Environment Variables](#environment-variables)).
 
-Open `.env` and configure the required variables:
-
-```env
-# Database (Required)
-DATABASE_URL="postgresql://user:password@host:5432/database?pgbouncer=true"
-DIRECT_URL="postgresql://user:password@host:5432/database"
-
-# Clerk Authentication (Required)
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY="pk_..."
-CLERK_SECRET_KEY="sk_..."
-NEXT_PUBLIC_CLERK_SIGN_IN_URL="/sign-in"
-NEXT_PUBLIC_CLERK_SIGN_UP_URL="/sign-up"
-
-# AI Providers (At least one required, can be set via Admin Panel)
-OPENAI_API_KEY="sk-..."
-GEMINI_API_KEY="..."
-
-# Stripe (Optional, can be set via Admin Panel)
-STRIPE_SECRET_KEY="sk_..."
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY="pk_..."
-STRIPE_WEBHOOK_SECRET="whsec_..."
-```
-
-5. **Initialize Database**
+**4. Initialize the database**
 
 ```bash
-# Push schema to database
 npx prisma db push
-
-# Generate Prisma client
-npx prisma generate
-
-# Optional: Seed sample data
 npx prisma db seed
 ```
 
-6. **Start Development Server**
+**5. Start the development server**
 
 ```bash
 npm run dev
 ```
 
-7. **Access the Application**
+The application will be available at `http://localhost:3000`.
 
-- **Landing Page**: http://localhost:3000
-- **User Platform**: http://localhost:3000/platform
-- **Admin Panel**: http://localhost:3000/admin
+<br/>
 
-8. **Create Admin Account**
-
-Sign up through the application, then manually add your user to the `AdminUser` table:
-
-```sql
-INSERT INTO "AdminUser" (id, "userId", email, role)
-VALUES ('admin-id', 'your-clerk-user-id', 'your@email.com', 'SUPER_ADMIN');
-```
-
-Or use Prisma Studio:
-
-```bash
-npx prisma studio
-```
-
----
-
-## Deployment Options
-
-### Vercel (Recommended)
-
-1. Push code to GitHub/GitLab/Bitbucket
-2. Import project in Vercel dashboard
-3. Configure environment variables
-4. Deploy
-
-The `vercel.json` configuration is pre-configured for optimal deployment.
-
-### Docker
-
-**Using Docker Compose (Recommended for self-hosting)**
+### Quick Start with Docker
 
 ```bash
 # Start all services (PostgreSQL + App + Adminer)
 docker-compose up -d
 
-# View logs
-docker-compose logs -f app
-
-# Stop services
-docker-compose down
+# The app will be available at http://localhost:3000
+# Adminer (DB management) at http://localhost:8080
 ```
 
-**Manual Docker Build**
+<br/>
+
+---
+
+<br/>
+
+## Environment Variables
+
+<details>
+<summary><strong>Click to expand full environment variable reference</strong></summary>
+
+<br/>
+
+### Core Application
+
+| Variable | Required | Description |
+|:---|:---:|:---|
+| `DATABASE_URL` | Yes | PostgreSQL connection string (pooled) |
+| `DIRECT_URL` | Yes | PostgreSQL direct connection string |
+| `NEXT_PUBLIC_APP_URL` | Yes | Public application URL |
+
+### Authentication (Clerk)
+
+| Variable | Required | Description |
+|:---|:---:|:---|
+| `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` | Yes | Clerk publishable key |
+| `CLERK_SECRET_KEY` | Yes | Clerk secret key |
+| `NEXT_PUBLIC_CLERK_SIGN_IN_URL` | No | Sign-in page path (default: `/sign-in`) |
+| `NEXT_PUBLIC_CLERK_SIGN_UP_URL` | No | Sign-up page path (default: `/sign-up`) |
+
+### Payments (Stripe)
+
+| Variable | Required | Description |
+|:---|:---:|:---|
+| `STRIPE_SECRET_KEY` | Yes | Stripe secret key |
+| `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Yes | Stripe publishable key |
+| `STRIPE_WEBHOOK_SECRET` | Yes | Stripe webhook signing secret |
+
+### AI Providers
+
+| Variable | Required | Description |
+|:---|:---:|:---|
+| `OPENAI_API_KEY` | No | OpenAI API key (fallback) |
+| `GEMINI_API_KEY` | No | Google Gemini API key (fallback) |
+| `KLING_ACCESS_KEY` | No | Kling AI access key (fallback) |
+| `KLING_SECRET_KEY` | No | Kling AI secret key (fallback) |
+
+### Storage
+
+| Variable | Required | Description |
+|:---|:---:|:---|
+| `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` | No | Cloudinary cloud name |
+| `CLOUDINARY_API_KEY` | No | Cloudinary API key |
+| `CLOUDINARY_API_SECRET` | No | Cloudinary API secret |
+
+> **Note:** AI API keys can also be configured per-model through the Admin Panel, with a three-tier priority system: Model-specific key --> Admin default key --> Environment variable.
+
+</details>
+
+<br/>
+
+---
+
+<br/>
+
+## Deployment
+
+### Vercel (Recommended)
+
+<table>
+<tr>
+<td width="60%">
+
+**One-Click Deploy**
+
+1. Push your repository to GitHub
+2. Import the project in [Vercel Dashboard](https://vercel.com/new)
+3. Add all environment variables
+4. Deploy
+
+Vercel will automatically detect Next.js and configure the build pipeline. Cron jobs for analytics collection and health checks are pre-configured in `vercel.json`.
+
+</td>
+<td width="40%" align="center">
+
+<img src="docs/images/deploy-vercel.png" alt="Deploy to Vercel" width="260" />
+
+</td>
+</tr>
+</table>
+
+### Docker
 
 ```bash
-# Build image
+# Build the production image
 docker build -t ai-creative-studio .
 
-# Run container
-docker run -p 3000:3000 --env-file .env ai-creative-studio
+# Run with docker-compose (includes PostgreSQL & Adminer)
+docker-compose up -d
 ```
 
-### Self-Hosted (Node.js)
+The Docker setup includes:
+- **Multi-stage build** for optimized image size
+- **PostgreSQL 16 Alpine** with health checks
+- **Adminer** for database management
+- **Non-root user** for security
+- **dumb-init** for proper signal handling
+
+### Self-Hosted
 
 ```bash
-# Build production bundle
+# Build for production
 npm run build
 
-# Start production server
+# Start the production server
 npm start
 ```
 
-For production, use a process manager like PM2:
+For self-hosted deployments, use the provided setup scripts:
 
 ```bash
-npm install -g pm2
-pm2 start npm --name "ai-studio" -- start
-pm2 save
+# Linux/macOS
+chmod +x setup-production-env.sh
+./setup-production-env.sh
+
+# Windows
+setup-production-env.bat
 ```
 
----
-
-## Environment Configuration
-
-### Required Variables
-
-| Variable | Description |
-|----------|-------------|
-| `DATABASE_URL` | PostgreSQL connection string (pooled connection) |
-| `DIRECT_URL` | PostgreSQL direct connection (for migrations) |
-| `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` | Clerk public API key |
-| `CLERK_SECRET_KEY` | Clerk secret API key |
-
-### Optional Variables (Configurable via Admin Panel)
-
-| Variable | Admin Panel Location | Description |
-|----------|---------------------|-------------|
-| `OPENAI_API_KEY` | Settings > AI Keys | OpenAI API key |
-| `GEMINI_API_KEY` | Settings > AI Keys | Google Gemini API key |
-| `KLING_ACCESS_KEY` | Settings > AI Keys | Kling AI access key |
-| `KLING_SECRET_KEY` | Settings > AI Keys | Kling AI secret key |
-| `STRIPE_SECRET_KEY` | Settings > Payments | Stripe secret key |
-| `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Settings > Payments | Stripe public key |
-| `STRIPE_WEBHOOK_SECRET` | Settings > Payments | Stripe webhook secret |
-
-### Application Variables
-
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `NEXT_PUBLIC_APP_URL` | http://localhost:3000 | Application base URL |
-| `NODE_ENV` | development | Environment mode |
+<br/>
 
 ---
 
-## Database Schema
+<br/>
 
-The Prisma schema contains 35+ models organized into logical domains:
+## Admin Panel
 
-### Core User Models
-- `User` — Platform users with credits and authentication
-- `AdminUser` — Admin accounts with role-based access
-- `AdminCreditLog` — Credit adjustment audit trail
+The admin panel provides **30+ management modules** accessible at `/admin`. Role-based access control supports four permission levels:
 
-### AI System Models
-- `AiModel` — AI model definitions with extensive configuration
-- `ModelCreditCost` — Per-model credit pricing
-- `GeneratedImage` — Generation history and outputs
-- `AiUsageModeration` — Rate limiting and abuse prevention
+<table>
+<tr>
+<th align="center">Role</th>
+<th align="left">Permissions</th>
+</tr>
+<tr>
+<td align="center"><strong>Super Admin</strong></td>
+<td>Full access to all modules, user management, system settings, API keys</td>
+</tr>
+<tr>
+<td align="center"><strong>Admin</strong></td>
+<td>Content management, user moderation, analytics, model configuration</td>
+</tr>
+<tr>
+<td align="center"><strong>Support</strong></td>
+<td>Contact submissions, user inquiries, help center management</td>
+</tr>
+<tr>
+<td align="center"><strong>Read Only</strong></td>
+<td>View-only access to dashboard, analytics, and audit logs</td>
+</tr>
+</table>
 
-### Chat System Models
-- `ChatConversation` — Conversation threads
-- `ChatMessage` — Individual messages with metadata
-- `ChatIntegration` — External platform configurations
-- `ChatPrompt` — Predefined conversation starters
-- `VoiceSettings` — Text-to-speech configuration
+<br/>
 
-### CMS Models
-- `LandingFeature` — Landing page feature cards
-- `GalleryItem` — Showcase gallery items
-- `Testimonial` — Customer reviews
-- `BlogPost` — Blog articles
-- `LegalContent` — Legal documents (ToS, Privacy, etc.)
-- `HelpCenterContent` — Help documentation
+### Module Overview
 
-### Navigation and Footer
-- `NavItem` — Navigation menu items
-- `FooterLinkCategory` — Footer link sections
-- `FooterLink` — Individual footer links
-- `SocialLink` — Social media links
-- `ContactInfo` — Contact information
+<table>
+<tr>
+<td width="33%" valign="top">
 
-### Settings and Configuration
-- `GlobalSettings` — System-wide configuration
-- `FeatureFlag` — Feature toggles
-- `CookieSettings` — Cookie consent configuration
-- `ContactSettings` — Contact form settings
+**Core Management**
+- Dashboard & KPI Metrics
+- User Management & Credits
+- AI Model Configuration
+- Model Credit Costs
+- Role & Permission Management
+- Audit Logs
+- Feature Flags
+- Analytics & Revenue
+- Health Monitoring
 
-### Billing and Analytics
-- `PricingPlan` — Subscription/credit plans
-- `Transaction` — Payment records
-- `StripeBillingLog` — Stripe event logs
-- `AnalyticsRecord` — Usage metrics
-- `AuditLog` — Admin action logs
-- `SystemHealthMetric` — Health monitoring
+</td>
+<td width="33%" valign="top">
 
-### Contact System
-- `ContactSubmission` — Contact form submissions
-- `ContactSettings` — Contact page configuration
+**Content Management**
+- Blog CMS (Posts, Categories, Tags)
+- Gallery Curation
+- Testimonials Management
+- Help Center Articles
+- Legal Pages (Versioned)
+- About Page Configuration
+- Contact Submissions
+- Prompt Suggestions
 
-### Integration Documentation
-- `IntegrationDoc` — Admin-managed integration guides
+</td>
+<td width="33%" valign="top">
+
+**System Configuration**
+- Global Site Settings
+- Navigation Management
+- Footer CMS
+- Cookie Consent Settings
+- Chat Integrations
+- Chat Prompt Library
+- Voice Settings (TTS/STT)
+- Billing & Pricing Plans
+- Moderation & Abuse Flags
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+<p align="center">
+  <img src="docs/images/admin-dashboard.png" alt="Admin Dashboard" width="900" />
+</p>
+
+<br/>
 
 ---
+
+<br/>
 
 ## API Reference
 
 ### Public Endpoints
 
 | Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/api/health` | System health check |
-| `GET` | `/api/docs` | API documentation |
+|:---:|:---|:---|
+| `POST` | `/api/generate` | Generate AI images |
+| `POST` | `/api/chat` | Send chat messages to LLM |
+| `POST` | `/api/voice/tts` | Text-to-Speech conversion |
+| `POST` | `/api/voice/stt` | Speech-to-Text transcription |
+| `POST` | `/api/kling/token` | Generate Kling AI JWT token |
+| `POST` | `/api/checkout` | Create Stripe checkout session |
+| `GET` | `/api/plans` | Retrieve pricing plans |
+| `GET` | `/api/prompts` | Get prompt suggestions |
+| `GET` | `/api/health` | System health status |
+| `GET` | `/api/maintenance` | Maintenance mode status |
+| `GET` | `/api/docs` | Documentation content |
+| `GET` | `/api/legal` | Legal page content |
 | `GET` | `/api/footer` | Footer data |
-| `GET` | `/api/legal/[type]` | Legal documents |
-
-### Authenticated Endpoints (Clerk JWT)
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `POST` | `/api/generate` | Image generation |
-| `POST` | `/api/chat` | Chat completion |
-| `POST` | `/api/voice` | Text-to-speech |
-| `POST` | `/api/voice/transcribe` | Speech-to-text |
-| `GET` | `/api/prompts` | Prompt suggestions |
-
-### Admin Endpoints (Admin Role Required)
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET/POST/PUT/DELETE` | `/api/admin/users` | User management |
-| `GET/POST/PUT/DELETE` | `/api/admin/models` | Model management |
-| `GET/POST` | `/api/admin/settings` | Settings management |
-| `GET` | `/api/admin/analytics` | Analytics data |
+| `GET` | `/api/download` | CORS proxy for file downloads |
 
 ### Webhook Endpoints
 
 | Method | Endpoint | Description |
-|--------|----------|-------------|
-| `POST` | `/api/webhooks/stripe` | Stripe payment webhooks |
-| `POST` | `/api/integrations/whatsapp` | WhatsApp message handler |
-| `POST` | `/api/integrations/telegram` | Telegram update handler |
-| `POST` | `/api/integrations/discord` | Discord interaction handler |
-| `POST` | `/api/integrations/slack` | Slack event handler |
+|:---:|:---|:---|
+| `POST` | `/api/webhooks` | Stripe payment webhooks |
+| `POST` | `/api/integrations/discord` | Discord bot webhook |
+| `POST` | `/api/integrations/slack` | Slack bot webhook |
 
-### Cron Endpoints
+### Admin API
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/api/cron/daily-credits` | Daily credit refill |
-| `GET` | `/api/cron/analytics` | Analytics aggregation |
+The admin API provides **22 CRUD endpoints** under `/api/admin/` covering all management modules. Each endpoint requires authenticated admin access with appropriate role permissions.
 
----
+<details>
+<summary><strong>View all admin endpoints</strong></summary>
 
-## Security
+<br/>
 
-### Authentication
-- Clerk-managed authentication with industry-standard security
-- Social login support (Google, GitHub, Apple, etc.)
-- Multi-factor authentication option
-- Secure session management with automatic refresh
+| Endpoint | Description |
+|:---|:---|
+| `/api/admin/analytics` | Revenue & usage analytics |
+| `/api/admin/audit-logs` | Admin action audit trail |
+| `/api/admin/billing` | Billing management |
+| `/api/admin/chat-integrations` | Bot integration configuration |
+| `/api/admin/chat-prompts` | Prompt suggestion management |
+| `/api/admin/contact-submissions` | Contact form submissions |
+| `/api/admin/credits` | User credit management |
+| `/api/admin/feature-flags` | Feature flag toggles |
+| `/api/admin/footer` | Footer content management |
+| `/api/admin/gallery` | Gallery item curation |
+| `/api/admin/health` | System health metrics |
+| `/api/admin/help` | Help center articles |
+| `/api/admin/integrations` | Integration documentation |
+| `/api/admin/legal` | Legal page management |
+| `/api/admin/model-costs` | Model credit cost config |
+| `/api/admin/moderation` | Content moderation |
+| `/api/admin/pricing-plans` | Pricing plan management |
+| `/api/admin/roles` | Admin role management |
+| `/api/admin/settings` | Global settings |
+| `/api/admin/testimonials` | Testimonial management |
+| `/api/admin/users` | User management |
+| `/api/admin/voice-settings` | Voice configuration |
 
-### Authorization
-- Role-based access control (SUPER_ADMIN, ADMIN, SUPPORT, READ_ONLY)
-- Permission-based actions for granular control
-- Admin audit logging for compliance
+</details>
 
-### Data Protection
-- API keys encrypted at rest in database
-- Environment variable isolation
-- Input sanitization on all endpoints
-- SQL injection prevention through Prisma ORM
-- XSS protection via React's built-in escaping
-
-### Rate Limiting
-- Per-user request limits (configurable per model)
-- IP-based throttling
-- Abuse flag system with automatic suspension
-- Moderation queue for flagged users
-
-### API Security
-- JWT token validation for all authenticated endpoints
-- Webhook signature verification (Stripe, etc.)
-- CORS configuration
-- Request size limits
+<br/>
 
 ---
 
-## Project Structure
+<br/>
 
+## Screenshots
+
+<table>
+<tr>
+<td align="center" width="50%">
+  <img src="docs/images/screenshot-landing.png" alt="Landing Page" width="440" />
+  <br/><br/>
+  <strong>Landing Page</strong>
+</td>
+<td align="center" width="50%">
+  <img src="docs/images/screenshot-studio.png" alt="AI Studio" width="440" />
+  <br/><br/>
+  <strong>AI Studio</strong>
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
+  <img src="docs/images/screenshot-chat.png" alt="AI Chat" width="440" />
+  <br/><br/>
+  <strong>AI Chat Interface</strong>
+</td>
+<td align="center" width="50%">
+  <img src="docs/images/screenshot-gallery.png" alt="Gallery" width="440" />
+  <br/><br/>
+  <strong>Image Gallery</strong>
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
+  <img src="docs/images/screenshot-admin.png" alt="Admin Panel" width="440" />
+  <br/><br/>
+  <strong>Admin Dashboard</strong>
+</td>
+<td align="center" width="50%">
+  <img src="docs/images/screenshot-billing.png" alt="Billing" width="440" />
+  <br/><br/>
+  <strong>Billing & Credits</strong>
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
+  <img src="docs/images/screenshot-blog.png" alt="Blog" width="440" />
+  <br/><br/>
+  <strong>Blog</strong>
+</td>
+<td align="center" width="50%">
+  <img src="docs/images/screenshot-docs.png" alt="Documentation" width="440" />
+  <br/><br/>
+  <strong>Developer Documentation</strong>
+</td>
+</tr>
+</table>
+
+<br/>
+
+---
+
+<br/>
+
+## Database Schema
+
+The application uses **30+ Prisma models** organized into logical domains:
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+**Users & Auth**
+- User
+- AdminUser
+- AdminCreditLog
+- AiUsageModeration
+
+**AI & Generation**
+- AiModel
+- ModelCreditCost
+- GeneratedImage
+- PromptSuggestion
+
+</td>
+<td width="33%" valign="top">
+
+**Content & CMS**
+- BlogPost
+- GalleryItem
+- Testimonial
+- HelpArticle
+- LegalContent
+- LandingFeature
+- NavItem
+- FooterLinkCategory
+
+</td>
+<td width="33%" valign="top">
+
+**System & Config**
+- GlobalSettings
+- FeatureFlag
+- AuditLog
+- AnalyticsRecord
+- HealthMetric
+- CookieSettings
+- ContactSubmission
+- ChatIntegration
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+### Database Commands
+
+```bash
+# Push schema changes to database
+npx prisma db push
+
+# Seed the database with initial data
+npx prisma db seed
+
+# Open Prisma Studio (visual DB editor)
+npx prisma studio
+
+# Generate Prisma client
+npx prisma generate
 ```
-ai-creative-studio/
-|
-+-- app/                          # Next.js App Router
-|   +-- (auth)/                   # Authentication pages
-|   |   +-- sign-in/
-|   |   +-- sign-up/
-|   |
-|   +-- admin/                    # Admin dashboard
-|   |   +-- page.tsx              # Dashboard home
-|   |   +-- settings/             # Global settings
-|   |   +-- models/               # AI model management
-|   |   +-- users/                # User management
-|   |   +-- features/             # Landing features CMS
-|   |   +-- gallery/              # Gallery management
-|   |   +-- testimonials/         # Testimonials CMS
-|   |   +-- blog/                 # Blog management
-|   |   +-- plans/                # Pricing plans
-|   |   +-- chat-integrations/    # External platform setup
-|   |   +-- chat-prompts/         # Prompt management
-|   |   +-- voice-settings/       # Voice configuration
-|   |   +-- footer/               # Footer CMS
-|   |   +-- navigation/           # Navigation CMS
-|   |   +-- legal/                # Legal documents
-|   |   +-- help-center/          # Help content
-|   |   +-- analytics/            # Analytics dashboard
-|   |   +-- audit-logs/           # Audit trail
-|   |   +-- roles/                # Role management
-|   |   +-- feature-flags/        # Feature toggles
-|   |   +-- cookies/              # Cookie settings
-|   |   +-- contact/              # Contact submissions
-|   |   +-- health/               # System health
-|   |   +-- moderation/           # User moderation
-|   |   +-- model-costs/          # Credit cost config
-|   |   +-- billing/              # Billing logs
-|   |   +-- integrations/         # Integration docs
-|   |   +-- about/                # About page CMS
-|   |   +-- prompt-suggestions/   # Prompt suggestions
-|   |
-|   +-- platform/                 # User platform
-|   |   +-- page.tsx              # Dashboard
-|   |   +-- studio/               # Generation studio
-|   |   +-- chat/                 # AI chat
-|   |   +-- gallery/              # Personal gallery
-|   |   +-- history/              # Generation history
-|   |   +-- billing/              # Subscription/credits
-|   |   +-- settings/             # User settings
-|   |   +-- help/                 # Help center
-|   |
-|   +-- api/                      # API routes
-|   |   +-- generate/             # Generation endpoint
-|   |   +-- chat/                 # Chat endpoint
-|   |   +-- voice/                # Voice endpoints
-|   |   +-- webhooks/             # Webhook handlers
-|   |   +-- integrations/         # Platform integrations
-|   |   +-- admin/                # Admin API
-|   |   +-- health/               # Health check
-|   |   +-- cron/                 # Scheduled tasks
-|   |
-|   +-- components/               # React components
-|   |   +-- landing/              # Landing page components
-|   |   +-- ui/                   # UI primitives
-|   |   +-- chat/                 # Chat components
-|   |   +-- gallery/              # Gallery components
-|   |
-|   +-- hooks/                    # Custom React hooks
-|   +-- globals.css               # Global styles
-|   +-- layout.tsx                # Root layout
-|   +-- page.tsx                  # Landing page
-|
-+-- lib/                          # Utilities and services
-|   +-- ai-service.ts             # AI provider abstraction
-|   +-- db.ts                     # Prisma client instance
-|   +-- stripe.ts                 # Stripe utilities
-|   +-- stripe-actions.ts         # Stripe server actions
-|   +-- actions.ts                # General server actions
-|   +-- admin-actions.ts          # Admin server actions
-|   +-- contact-actions.ts        # Contact form actions
-|   +-- config.ts                 # App configuration
-|   +-- utils.ts                  # Utility functions
-|   +-- schemas.ts                # Validation schemas
-|   +-- seo.ts                    # SEO utilities
-|   +-- crypto.ts                 # Encryption utilities
-|   +-- demo-mode.ts              # Demo mode handling
-|   +-- prompt-enhancer.ts        # Prompt enhancement
-|   +-- integrations/             # External platform handlers
-|       +-- message-handler.ts    # Unified message processing
-|
-+-- prisma/
-|   +-- schema.prisma             # Database schema
-|   +-- seed.ts                   # Seed data script
-|
-+-- scripts/                      # Utility scripts
-|   +-- add-ai-models.ts          # Model seeding
-|   +-- migrate-encrypt-api-keys.ts
-|   +-- verify-env.ts
-|   +-- update-landing.ts
-|
-+-- public/                       # Static assets
-|
-+-- docker-compose.yml            # Docker composition
-+-- Dockerfile                    # Container definition
-+-- vercel.json                   # Vercel configuration
-+-- package.json                  # Dependencies
-+-- tsconfig.json                 # TypeScript config
-+-- tailwind.config.ts            # Tailwind config
-+-- next.config.ts                # Next.js config
-```
+
+<br/>
 
 ---
 
-## Scripts Reference
+<br/>
+
+## Available Scripts
 
 | Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build production bundle |
+|:---|:---|
+| `npm run dev` | Start development server with hot reload |
+| `npm run build` | Create optimized production build |
 | `npm start` | Start production server |
-| `npm run lint` | Run ESLint |
-| `npm run db:push` | Push schema to database |
-| `npm run db:seed` | Seed database with sample data |
-| `npm run db:studio` | Open Prisma Studio |
+| `npm run lint` | Run ESLint code analysis |
+| `npm run db:push` | Push Prisma schema to database |
+| `npm run db:seed` | Seed database with initial data |
+| `npm run db:studio` | Open Prisma Studio (visual editor) |
+| `npm run prepare-delivery` | Package project for marketplace delivery |
+| `npm run migrate:encrypt-keys` | Encrypt existing API keys in database |
+
+<br/>
 
 ---
+
+<br/>
+
+## Credit System
+
+The platform uses a flexible credit-based billing model:
+
+| Feature | Credits |
+|:---|:---|
+| Welcome Bonus (new users) | 5 credits |
+| Daily Free Credits | 3 credits/day (refilled if below 10) |
+| Integration Users | 100 credits |
+| Per-Model Cost | Configurable via Admin Panel |
+
+Credits are deducted per generation based on the AI model used. Administrators can configure per-model credit costs, adjust user balances with audit logging, and manage pricing plans through the admin panel.
+
+<br/>
+
+---
+
+<br/>
+
+## Browser Support
+
+| Browser | Version |
+|:---|:---|
+| Chrome | Last 2 versions |
+| Firefox | Last 2 versions |
+| Safari | Last 2 versions |
+| Edge | Last 2 versions |
+
+<br/>
+
+---
+
+<br/>
+
+## Changelog
+
+### v2.0.0 (Current)
+
+- Next.js 16 and React 19 upgrade
+- Multi-provider AI support (OpenAI, Gemini, Kling, Claude, Stable Diffusion)
+- Video generation with Kling AI
+- Voice processing (TTS/STT)
+- Platform integrations (WhatsApp, Telegram, Discord, Slack)
+- 30+ admin panel modules
+- CMS-driven landing page
+- Blog, Help Center, and Legal CMS
+- Feature flags with rollout percentages
+- Health monitoring system
+- Cookie consent (GDPR-compliant)
+- PWA support
+- Comprehensive SEO with JSON-LD
+- Docker deployment support
+- API key encryption
+
+<br/>
+
+---
+
+<br/>
 
 ## Support
 
-For technical support, customization requests, or enterprise licensing inquiries, please contact through the official support channels.
+<table>
+<tr>
+<td align="center" width="33%">
+  <br/>
+  <strong>Documentation</strong>
+  <br/><br/>
+  Access the built-in developer documentation at <code>/docs</code> for detailed integration guides and API references.
+  <br/><br/>
+</td>
+<td align="center" width="33%">
+  <br/>
+  <strong>Issue Tracker</strong>
+  <br/><br/>
+  Report bugs and request features through the CodeCanyon item comments section.
+  <br/><br/>
+</td>
+<td align="center" width="33%">
+  <br/>
+  <strong>Updates</strong>
+  <br/><br/>
+  All future updates are included with your purchase. Check CodeCanyon for the latest version.
+  <br/><br/>
+</td>
+</tr>
+</table>
+
+<br/>
 
 ---
 
+<br/>
+
 ## License
 
+<<<<<<< Updated upstream
 ## License & Commercial Use 
 
 **⚠️ NOTICE: PROPRIETARY SHOWCASE**
@@ -1025,11 +1143,33 @@ If you obtain a valid commercial license from the author, you will receive the *
 Please contact the author for pricing and details.
 
 Copyright © 2026. All rights reserved.
+=======
+**This is a commercial product.** This project is licensed under a **Commercial License**. 
+
+Unauthorized copying, distribution, modification, public display, or public performance of this software is strictly prohibited. Purchase grants you a license to use this software under the terms specified at the point of sale.
+
+For licensing inquiries, visit the [product page](https://codecanyon.net/item/ai-creative-studio).
+
+**All rights reserved.**
+
+<br/>
+>>>>>>> Stashed changes
 
 ---
 
-**AI Creative Studio** — Deploy your AI platform today. Manage it forever without writing code.
+<p align="center">
+  <img src="docs/images/logo-footer.png" alt="AI Creative Studio" width="120" />
+</p>
 
+<p align="center">
+  <strong>AI Creative Studio</strong> -- Built with precision for the modern web.
+</p>
 
+<<<<<<< Updated upstream
 ---
 *Bu repo, projenin Public Vitrin sürümüdür. Hassas iş mantığı ve API anahtarları güvenlik nedeniyle gizlenmiştir.*
+=======
+<p align="center">
+  <sub>Next.js 16 / React 19 / TypeScript 5.8 / PostgreSQL / Prisma / Stripe / Clerk</sub>
+</p>
+>>>>>>> Stashed changes
